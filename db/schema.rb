@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20170404223109) do
   end
 
   create_table "days", force: :cascade do |t|
-    t.integer  "day_number"
+    t.string   "day_name"
     t.integer  "week_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
