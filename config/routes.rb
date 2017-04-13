@@ -3,4 +3,8 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   post 'auth_user' => 'authentication#authenticate_user'
   get 'home' => 'home#index'
+
+  get 'days/:id' => 'days#show'
+  get 'weeks/:id' => 'weeks#show'
+  resources :meals, only: [:show, :create]
 end

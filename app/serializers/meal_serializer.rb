@@ -1,5 +1,5 @@
 class MealSerializer < ActiveModel::Serializer
-  attributes :id, :name, :recipe, :day_id
+  attributes :id, :name, :recipe
 
   belongs_to :day
   has_many :ingredients
