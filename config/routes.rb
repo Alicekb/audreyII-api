@@ -6,5 +6,5 @@ Rails.application.routes.draw do
 
   get 'days/:id' => 'days#show'
   get 'weeks/:id' => 'weeks#show'
-  resources :meals, only: [:show, :create]
+  resources :meals, only: [:show, :create, :destroy]
 end
