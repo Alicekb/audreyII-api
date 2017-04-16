@@ -8,6 +8,6 @@ class User < ApplicationRecord
 
   def build_calendar
     calendar = Calendar.create(year: Date.today.year, user_id: id)
-    calendar.weeks.create(week_number: calendar.weeks.length)
+    calendar.weeks.create
   end
 end

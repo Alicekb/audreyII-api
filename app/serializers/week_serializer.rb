@@ -1,5 +1,5 @@
 class WeekSerializer < ActiveModel::Serializer
-  attributes :id, :week_number
+  attributes :id
   
   belongs_to :calendar
   has_many :days

@@ -53,7 +53,6 @@ ActiveRecord::Schema.define(version: 20170404223109) do
   end
 
   create_table "weeks", force: :cascade do |t|
-    t.integer  "week_number"
     t.integer  "calendar_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
