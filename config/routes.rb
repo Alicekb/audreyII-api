@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   post 'auth_user' => 'authentication#authenticate_user'
   get 'home' => 'home#index'
 
-  get 'days/:id' => 'days#show'
-  get 'weeks/:id' => 'weeks#show'
-  resources :meals, only: [:show, :create, :destroy]
+  namespace :v1 do
+    resources :days, only: [:show]
+    resources :weeks, only: [:show, :index]
+    resources :meals, only: [:show, :create, :destroy]
+  end
 end
