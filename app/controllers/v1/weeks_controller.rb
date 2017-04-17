@@ -20,6 +20,18 @@ module V1
       end
     end
 
+    def destroy
+      @week = Week.find(params[:id])
+      if @week.destroy
+        head :ok
+      else
+        render json: {
+          error: "Week could not be deleted",
+          status: 400
+        }, status: 400
+      end  
+    end
+
     private
       def week_params
         params.require(:week).permit(:calendar_id)

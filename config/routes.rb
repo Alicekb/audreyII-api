@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   namespace :v1 do
     resources :days, only: [:show]
-    resources :weeks, only: [:index, :show, :create]
+    resources :weeks, only: [:index, :show, :create, :destroy]
     resources :meals, only: [:show, :create, :destroy]
   end
 end
