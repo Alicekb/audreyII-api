@@ -1,6 +1,7 @@
 module V1
   class WeeksController < ApplicationController
-
+    before_filter :authenticate_request!
+    
     def index
       weeks = Week.all
       render json: weeks

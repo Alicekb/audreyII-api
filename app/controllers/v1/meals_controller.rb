@@ -1,5 +1,6 @@
 module V1
   class MealsController < ApplicationController
+    before_filter :authenticate_request!
     def show
       @meal = Meal.find(params[:id])
       if !!@meal
