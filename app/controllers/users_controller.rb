@@ -3,7 +3,7 @@ class UsersController < ApplicationController
     user = User.new(user_params)
 
     if user.save
-      render :json => user
+      head :ok
     else
       render json: { errors: user.errors.full_messages }, :status => 400
     end
