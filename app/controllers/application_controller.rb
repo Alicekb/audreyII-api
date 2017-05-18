@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::API
   attr_reader :current_user
+  before_action :configure_permitted_parameters, if: :devise_controller?
 
   protected
   def authenticate_request!
@@ -26,5 +27,10 @@ class ApplicationController < ActionController::API
 
   def user_id_in_token?
     http_token && auth_token && auth_token[:user_id].to_i
+  end
+
+  protected
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:username])
   end
 end

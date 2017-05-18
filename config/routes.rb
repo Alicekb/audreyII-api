@@ -9,4 +9,6 @@ Rails.application.routes.draw do
     resources :weeks, only: [:index, :show, :create, :destroy]
     resources :meals, only: [:show, :create, :destroy]
   end
+
+  resources :users, only: :create
 end
