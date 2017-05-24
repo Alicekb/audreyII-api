@@ -10,4 +10,8 @@ class User < ApplicationRecord
     calendar = Calendar.create(year: Date.today.year, user_id: id)
     calendar.weeks.create
   end
+
+  def latest_calendar
+    calendars.last.id
+  end
 end
