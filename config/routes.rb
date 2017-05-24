@@ -8,5 +8,6 @@ Rails.application.routes.draw do
     delete 'days/reset/:id', :to => 'days#reset'
     resources :weeks, only: [:index, :show, :create, :destroy]
     resources :meals, only: [:show, :create, :destroy]
+    resources :calendars, only: [:show]
   end
 end
