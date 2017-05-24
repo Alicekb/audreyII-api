@@ -9,10 +9,25 @@ class AuthenticationController < ApplicationController
     end
   end
 
+  def authenticate_token
+    if request.headers['Authorization'] != nil
+      token = request.headers['Authorization'].split(' ').last
+      auth = JWT.decode(token, nil, false).first
+      user = User.find(auth["user_id"])
+      render json: payload(user)
+    else
+      render json: {
+        errors: [
+          {message: "No JWT token found"}
+        ]
+      }, status: 403
+    end
+  end
+
   private
 
   def payload(user)
-    return nil unless user and user.id
+    return nil unless user && user.id
     {
       auth_token: JsonWebToken.encode({user_id: user.id}),
       user: {id: user.id, email: user.email, username: user.username}
