@@ -1,7 +1,9 @@
 class Week < ApplicationRecord
-  validates :calendar_id, presence: true
   belongs_to :calendar
   has_many :days
+  has_many :meals, through: :days
+  
+  validates :calendar_id, presence: true
   after_create :build_week
   before_destroy :destroy_associations
 
