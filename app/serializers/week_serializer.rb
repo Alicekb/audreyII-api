@@ -1,7 +1,4 @@
-class WeekSerializer < ActiveModel::Serializer
-  attributes :id
-  
-  belongs_to :calendar
+class WeekSerializer < ActiveModel::Serializer 
   has_many :days
   has_many :meals, through: :days
 end
