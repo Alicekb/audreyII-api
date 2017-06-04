@@ -9,7 +9,6 @@ module V1
     end
 
     def create
-      
       @meal = Meal.new(meal_params)
       if @meal.save
         render :json => @meal
