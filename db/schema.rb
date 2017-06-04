@@ -28,12 +28,12 @@ ActiveRecord::Schema.define(version: 20170604014950) do
 
   create_table "meals", force: :cascade do |t|
     t.string   "name"
-    t.string   "ingredients"
+    t.text     "ingredients"
     t.string   "recipe"
     t.integer  "day_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.string   "calories"
+    t.integer  "calories"
   end
 
   create_table "users", force: :cascade do |t|

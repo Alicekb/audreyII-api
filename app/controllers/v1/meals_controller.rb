@@ -9,6 +9,7 @@ module V1
     end
 
     def create
+      
       @meal = Meal.new(meal_params)
       if @meal.save
         render :json => @meal
@@ -31,7 +32,7 @@ module V1
 
     private
       def meal_params
-        params.require(:meal).permit(:name, :recipe, :calories, :day_id, :ingredients)
+        params.require(:meal).permit(:name, :recipe, :calories, :day_id, :ingredients => [])
       end
   end
 end
