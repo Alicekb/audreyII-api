@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170517192521) do
+ActiveRecord::Schema.define(version: 20170604014950) do
 
   create_table "calendars", force: :cascade do |t|
     t.integer  "year"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20170517192521) do
     t.integer  "day_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "calories"
   end
 
   create_table "users", force: :cascade do |t|
