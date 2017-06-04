@@ -31,7 +31,7 @@ module V1
 
     private
       def meal_params
-        params.require(:meal).permit(:name, :recipe, :day_id, :ingredients)
+        params.require(:meal).permit(:name, :recipe, :calories, :day_id, :ingredients)
       end
   end
 end
