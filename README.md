@@ -43,7 +43,7 @@ foreman start
 * [Rails](http://rubyonrails.org/) - The API framework used
 * [React](https://facebook.github.io/react/) - JavaScript library used
 * [Redux](http://redux.js.org/) - Used for Frontend State Management
-* [Semantic UI](https://semantic-ui.com/ - the CSS framework used
+* [Semantic UI](https://semantic-ui.com/) - the CSS framework used
 
 ## Versioning
 
