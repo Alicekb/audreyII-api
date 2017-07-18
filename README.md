@@ -1,4 +1,4 @@
-#Folender - AudreyII
+# Folender - AudreyII
 
 AudreyII is a yearly meal planning application. Once signed up a user can create weekly meal plans by searching the millions of recipes on the Edamun API. The user also has the option to print out a grocery list of ingredients out of those week's meals.
 
