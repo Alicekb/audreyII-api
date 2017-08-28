@@ -34,8 +34,7 @@ rails s
 
 ## Built With
 
-* [Rails](http://rubyonrails.org/) - The API framework used
-* [React](https://facebook.github.io/react/) - JavaScript library used
+* [Ruby on Rails](http://rubyonrails.org/) - The framework used for the API.
 
 ## Versioning
 
